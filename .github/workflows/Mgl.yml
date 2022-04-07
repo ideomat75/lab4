@@ -1,31 +1,25 @@
-
-
-name: MegaLenya
+name: test
 
 
 on:
   push:
-    branches: 
-     - master
-  
-
-
-
- 
+    branches:
+      - master
 
 
 jobs:
-  noname:
+  testing:
+
     runs-on: ubuntu-latest
-    
     steps:
-    
+
     - name: user
-      uses: actions/checkout@v1
-      
+      uses: actions/checkout@v1 
+
     - name: dir_check
       run: ls -la
-      
+
+
 
 
  
