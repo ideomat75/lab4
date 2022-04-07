@@ -18,6 +18,16 @@ jobs:
 
     - name: dir_check
       run: ls -la
+      
+    - name: set_compiler
+      run: sudo apt install clang-11 g++ cmake
+
+    - name: formatter_lib
+      run: | 
+          cd formatter_lib 
+          cmake . -DCMAKE_CXX_COMPILER=clang++
+          cmake --build .
+          cd ..
 
 
 
